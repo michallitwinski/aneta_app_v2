@@ -1,0 +1,15 @@
+{
+  "name": "aneta",
+  "version": "2.0.0",
+  "description": "Aplikacja dla Anety",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michał Litwiński",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+    <% include partials/header.ejs %>
+
+    <div id="hero-image-single" style="background-image: url('/images/<%= movie.hero_image %>')">
+        <h1 id="hero-title"><%= title %></h1>
+    </div>
+    
+    <div class="content-pagging clearfix">
+        <div class="poster-wrapper">
+            <a href="<%= link %>" target="_blank">
+                <img src="/images/<%= movie.poster %>" class="img-responsive">
+            </a>
+        </div>
+
+        <div class="description-wrapper">
+            <div class="description">
+                <p class="new-font"><%= movie.description %></p>
+            </div>
+            <div class="new_link" class="div-przycisk">
+                <a href="<%= link %>" target="_blank">
+                    <h2 class="movie-header">KLIKNIJ BY OTWORZYĆ W SKLEPIE</h2>  
+                </a>
+            </div>
+            <div class="new_link">
+                <a href="<%= link_next %>">
+                    <h2 class="movie-header"><%= text_linku %></h2>  
+                </a>       
+            </div>
+
+        </div>
+
+    </div>
+    <% include partials/footer.ejs %>
+    <% include partials/scripts.ejs %>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+    <% include partials/header.ejs %>
+
+    <div id="hero-image">
+        <h1 id="hero-title"><%= title %></h1>
+    </div>
+
+    <div class="div-opis">
+        <p class="new-font">&nbsp&nbsp&nbsp&nbsp Ponieważ ostatnio porwałem Ci majteczki jedynie właściwym wydaje się być, bym ci je odkupił. To chciałbym by była druga część mojego prezentu dla Ciebie. Niestety w materii sklepów z podobnymi produktami mam małe doświadczenie. Nie mam też zielonego pojęcia o rozmiarach. Proponuję, więc byś przejrzała poniższy komplet. To moje ulubione kroje bo traktuję to również, jako prezent dla siebie.</p>
+        <p class="new-font">&nbsp&nbsp&nbsp&nbsp Jeżeli masz ochotę na odrobinę zmysłowego ryzyka możemy razem udać się do sklepu. Pisząc to i wybierając modele fantazjowałem jak przymierzasz to w przebieralni a ja stoję obok rozkoszując się widokiem twego kuszącego ciała. Jak zechcesz możemy też zamówić kuriera na mój adres. Będzie na ciebie czekało u mnie. Tak jak Ja z utęsknieniem czekam na Ciebie.</p>
+        <p class="new-font">&nbsp&nbsp&nbsp&nbsp Jeżeli wybierzesz coś innego, na nasze spotkanie, to na pewno też będzie mi się podobało jak przyozdobisz to swoim ciałem. Jeżeli obdarzysz mnie taką przyjemnością to proszę o cały komplet. Kolejność jaką zaproponowałem nie jest przypadkowa. W takiej właśnie będę ciebie rozbierał. Sugeruję też klikanie w linki od pierwszego do ostatniego.</p>
+    </div>
+
+    <div id="posters-wrapper" class="content-padding clearfix">
+            <% for (var i = 0; i < n_zawartosc.length; i++) { %>
+            <div class="poster">
+
+                <a href="/niegrzeczna/<%= n_zawartosc[i].episode_number %>">
+
+                    <img src="/images/<%= n_zawartosc[i].poster %>" class="img-responsive">
+
+                    <div class="poster-info-overlay">
+                        <h3><%= n_zawartosc[i].title %></h3>
+                        <h4>Zobacz więcej &nbsp&nbsp<i class="fa fa-arrow-right"></i></h4>
+
+                    </div>
+
+                </a>
+            </div>
+            <% } %>
+    </div>
+    <% include partials/footer.ejs %>
+    <% include partials/scripts.ejs %>
+</body>
+</html>
