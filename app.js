@@ -6,7 +6,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 var routes =require('./routes');
 //main
-app.get('/', routes.main);
+app.get('/', routes.start);
+//start
+//TEST
+app.get('/main', routes.main);
+app.get('/start', routes.start);
 //home
 app.get('/niegrzeczna', routes.niegrzeczna);
 //movie_page - przekazanie ścieżki z zmienną

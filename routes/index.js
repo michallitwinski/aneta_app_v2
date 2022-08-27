@@ -7,6 +7,13 @@ exports.main = function(req,res){
         title : "Aplikacja Anety",
     });
 };
+//start
+exports.start = function(req, res){
+
+    res.render('start', {
+        title : "Aplikacja Anety",
+    });
+};
 //niegrzeczna - strona główna
 exports.niegrzeczna = function(req,res){
 
