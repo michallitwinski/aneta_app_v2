@@ -64,33 +64,6 @@ Moje style
 Hero Image / Title Styles 
 -----------------------------*/
 
-@media (min-width: 360px) {
-	#hero-image {
-	height: 400px;
-	}	
-
-}
-@media (min-width: 640px) {
-	#hero-image {
-	height: 500px;
-	}	
-}
-@media (min-width: 1024px) {
-	#hero-image {
-	height: 540px;
-	}	
-}
-@media (min-width: 1400px) {
-	#hero-image {
-	height: 660px;
-	}	
-}
-@media (min-width: 1640px) {
-	#hero-image {
-	height: 740px;
-	}	
-}
-
 #hero-image {
 	width: 100%;
 	background-color: #444;
@@ -99,16 +72,19 @@ Hero Image / Title Styles
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	height: 680px;
 }
 /*
 Wersja 2022 pierwsza próba
 */
 #main-image{
 	width: 100%;
-	background-color: #444;
+	background-color: #999;
+
 }
 .slider{
 	width: 100%;
+	animation: slider 4s linear infinite;
 }
 .slider_napis{
 	position: absolute;
@@ -452,6 +428,7 @@ Media Queries / Responsive Styles
 }
 
 /* Increase width of the hero-title element on Movie-single pages to prevent text from stacking */
+
 @media (max-width: 1099px) {
 	#hero-image-single #hero-title {
 		font-size: 1.05em;
@@ -459,6 +436,9 @@ Media Queries / Responsive Styles
 		width: 60%;
 		padding-left: 40px;
 		padding-right: 40px;
+	}
+	#hero-image, #hero-image-single, #hero-image-notFound {
+		height: 540px;
 	}
 }
 @media (max-width: 767px) {
@@ -571,4 +551,30 @@ Page Not Found Template Styles
   font-weight: 400;
   font-size: 1.20em;
   letter-spacing: 0.4px;
+}
+
+/*
+
+Animacja Slidera
+
+*/
+@keyframes slider {
+	0%{
+		opacity: 0;
+	}
+	2%{
+		opacity: 0;
+	}
+	13%{
+		opacity: 1;
+	}
+	87%{
+		opacity: 1;
+	}
+	98%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
 }

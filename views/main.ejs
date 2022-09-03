@@ -10,7 +10,7 @@
         </div>
         <div class="div-opis">
             <p class="new-font">Work in progress</p>
-            <p class="new-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam blanditiis quibusdam qui provident magnam atque dolorem temporibus voluptatem et autem eum earum fugit ullam in quo rerum non quam, hic minima culpa, ad ratione laborum iure. Odio eveniet quibusdam in sint nesciunt voluptas aliquam quae quaerat cupiditate facere velit ratione eos quos, cum quam officia eaque quis error nulla eum aliquid! Optio voluptatem laboriosam reprehenderit, recusandae ipsa quaerat dicta rerum expedita temporibus et! Possimus dolore dolores minima quibusdam amet. Omnis aspernatur consequatur nesciunt quis facere corporis deleniti voluptatem? Provident incidunt quisquam, recusandae assumenda rem at. Neque, illo. Dolorem dignissimos, labore culpa eos quia magni aspernatur, voluptatum molestias eaque pariatur rem quos incidunt. Id vel totam nemo modi molestiae, esse amet nostrum, illo maiores ratione optio eligendi aspernatur? At aperiam, est non et doloremque reiciendis beatae veritatis fugit numquam eveniet harum sapiente cumque facere repellat. Ducimus nostrum ipsum dolorem suscipit alias, praesentium dolores aperiam et totam repellat consequuntur ipsam accusamus illo esse quod pariatur quis officia dolor recusandae qui possimus iusto necessitatibus? Excepturi officia corporis voluptas alias cupiditate adipisci illo nemo saepe atque repudiandae debitis, odit laborum pariatur maiores quisquam facere magni ducimus! Rem, earum labore fugit quasi exercitationem laboriosam deserunt minima nam ab tempora incidunt magni sit accusantium nemo dicta quaerat libero et cum aperiam laudantium ea saepe deleniti! Assumenda deserunt repellendus, quia neque veniam inventore eaque praesentium sapiente. Inventore libero quo dolore minus! A quas veritatis facilis quo voluptatem, at, suscipit reiciendis nesciunt, architecto illum ipsam? Architecto mollitia eum tempora quia et expedita commodi corporis, molestias voluptas unde aspernatur? Placeat recusandae repellendus neque veritatis voluptas eos accusantium ipsam. Debitis, reiciendis quae accusamus unde reprehenderit necessitatibus! Voluptatem explicabo est assumenda dolores ratione quo modi iure dolorum laudantium vel? Voluptas ipsum ut esse. Corrupti quaerat distinctio, corporis incidunt cumque perspiciatis doloribus. Saepe, eum. Hic temporibus quos officiis? Corrupti alias vel laborum. Culpa error tenetur iste qui nam cumque dolorem quaerat voluptate nulla, accusamus, quasi adipisci quam accusantium quia, soluta unde consequatur aliquam tempora obcaecati dignissimos porro commodi praesentium dolores ullam. Cum quis suscipit porro perferendis adipisci autem molestiae illo, ducimus optio at rem voluptatem unde nam fugit iure facere commodi quaerat consequatur sint natus nihil fuga ea impedit. Velit voluptatem sequi aut illum a cum assumenda consectetur, magnam ratione provident, ipsa dolor obcaecati repudiandae laudantium vero natus in recusandae! Dolorum dolore et, unde vel aliquid sunt magni nobis, totam quas illum rerum quaerat sint dolores? Deleniti illo sapiente molestias fuga eos minima nulla cumque, amet dignissimos, et autem aut quos aliquam mollitia iste vitae impedit expedita eaque laboriosam provident fugit! Alias assumenda voluptatem harum fugiat! Vel nam in ullam dignissimos voluptates perferendis cumque assumenda. Fugiat voluptates minima sequi inventore consequatur voluptatem aliquid atque ea similique vitae doloremque quo sint </p>
+            
             <a href="/start">
             <div class="div-przycisk">
                 Wersja Oryginalna - Początek
@@ -28,7 +28,18 @@
     <% include partials/scripts.ejs %>
 
     <script>
-        alert('Work in progress');
+        let activeElement = 0;
+        const sliderImgHtml = document.querySelector('.slider');
+        const sliderImages = ["../images/1.jpg", "../images/2.jpg", "../images/3.jpg", "../images/4.jpg", "../images/5.jpg"];
+
+        function changeElement(){
+            activeElement++;
+            if(activeElement == sliderImages.length) activeElement = 0;
+            sliderImgHtml.src = sliderImages[activeElement];
+        };
+
+        setInterval(changeElement, 4000);
+        
     </script>
 </body>
 </html>
