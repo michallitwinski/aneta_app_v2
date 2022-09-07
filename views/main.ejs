@@ -10,7 +10,7 @@
             <img src="../images/3.jpg" alt="Zdjęcia" class="slider slider-trzy">
             <img src="../images/4.jpg" alt="Zdjęcia" class="slider slider-cztery">
             <img src="../images/5.jpg" alt="Zdjęcia" class="slider slider-piec">
-            <img src="../images/napis.png" alt="Napis" class="slider_napis">
+            <img src="../images/napis.png" alt="Napis" class="slider-napis slider-napis-start">
         </div>
         <div class="div-opis">
             <p class="new-font">Work in progress</p>
@@ -30,21 +30,7 @@
     
     <% include partials/footer.ejs %>
     <% include partials/scripts.ejs %>
-
-    <script>
-        /*
-        let activeElement = 0;
-        const sliderImgHtml = document.querySelector('.slider');
-        const sliderImages = ["../images/1.jpg", "../images/2.jpg", "../images/3.jpg", "../images/4.jpg", "../images/5.jpg"];
-
-        function changeElement(){
-            activeElement++;
-            if(activeElement == sliderImages.length) activeElement = 0;
-            sliderImgHtml.src = sliderImages[activeElement];
-        };
-
-        setInterval(changeElement, 4000);
-        */
-    </script>
+    
+    <script src="../javasripts/script.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "name": "aneta",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "Aplikacja dla Anety",
   "main": "app.js",
   "scripts": {

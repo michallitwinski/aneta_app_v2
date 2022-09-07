@@ -72,7 +72,7 @@ Hero Image / Title Styles
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
-	height: 880px;
+	height: 840px;
 }
 /*
 Wersja 2022 pierwsza próba
@@ -91,6 +91,8 @@ Wersja 2022 pierwsza próba
 	left: 0;
 	top: 0;
 	z-index: 5;
+}
+.slider-raz-anim{
 	animation: sliderRaz 25s linear infinite;
 }
 .slider-dwa{
@@ -98,6 +100,8 @@ Wersja 2022 pierwsza próba
 	left: 0;
 	top: 0;
 	z-index: 4;
+}
+.slider-dwa-anim{
 	animation: sliderDwa 25s linear infinite;
 }
 .slider-trzy{
@@ -105,6 +109,8 @@ Wersja 2022 pierwsza próba
 	left: 0;
 	top: 0;
 	z-index: 3;
+}
+.slider-trzy-anim{
 	animation: sliderTrzy 25s linear infinite;
 }
 .slider-cztery{
@@ -112,6 +118,8 @@ Wersja 2022 pierwsza próba
 	left: 0;
 	top: 0;
 	z-index: 2;
+}
+.slider-cztery-anim{
 	animation: sliderCztery 25s linear infinite;
 }
 .slider-piec{
@@ -119,15 +127,20 @@ Wersja 2022 pierwsza próba
 	left: 0;
 	top: 0;
 	z-index: 1;
+}
+.slider-piec-anim{
 	animation: sliderPiec 25s linear infinite;
 }
-.slider_napis{
+.slider-napis{
 	z-index: 6;
 	position: absolute;
-	width: 80%;
+	width: 70%;
 	top: 2%;
-	left: 10%;
-	right: -10%;
+	left: 15%;
+	right: -15%;
+}
+.slider-napis-start{
+	animation: sliderStart 5s linear 1;
 }
 
 /*
@@ -137,19 +150,19 @@ Animacja Slidera
 */
 @keyframes sliderRaz {
 	0%{
+		opacity: 0;
+	}
+	1%{
 		opacity: 1;
 	}
-	18%{
+	19%{
 		opacity: 1;
 	}
 	20%{
 		opacity: 0;
 	}
-	97%{
-		opacity: 0;
-	}
 	100%{
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
@@ -157,16 +170,16 @@ Animacja Slidera
 	0%{
 		opacity: 0;
 	}
-	19%{
+	20%{
 		opacity: 0;
 	}
-	22%{
+	21%{
 		opacity: 1;
 	}
-	38%{
+	39%{
 		opacity: 1;
 	}
-	42%{
+	40%{
 		opacity: 0;
 	}
 	97%{
@@ -181,16 +194,16 @@ Animacja Slidera
 	0%{
 		opacity: 0;
 	}
-	39%{
+	40%{
 		opacity: 0;
 	}
-	42%{
+	41%{
 		opacity: 1;
 	}
-	58%{
+	59%{
 		opacity: 1;
 	}
-	61%{
+	60%{
 		opacity: 0;
 	}
 	100%{
@@ -202,16 +215,16 @@ Animacja Slidera
 	0%{
 		opacity: 0;
 	}
-	59%{
+	60%{
 		opacity: 0;
 	}
-	62%{
+	61%{
 		opacity: 1;
 	}
-	78%{
+	79%{
 		opacity: 1;
 	}
-	81%{
+	80%{
 		opacity: 0;
 	}
 	100%{
@@ -223,19 +236,51 @@ Animacja Slidera
 	0%{
 		opacity: 0;
 	}
-	79%{
+	80%{
 		opacity: 0;
 	}
-	82%{
+	81%{
 		opacity: 1;
 	}
-	98%{
+	99%{
 		opacity: 1;
 	}
 	100%{
 		opacity: 0;
 	}
 }
+/* Animacja Napisu */
+@keyframes sliderStart {
+	0%{
+		width: 90%;
+		top: 10%;
+		left: 5%;
+		right: -5%;
+		opacity: 0;
+	}
+	40%{
+		width: 90%;
+		top: 10%;
+		left: 5%;
+		right: -5%;
+		opacity: 1;
+	}
+	60%{
+		width: 90%;
+		top: 10%;
+		left: 5%;
+		right: -5%;
+		opacity: 1;
+	}
+	100%{
+		width: 70%;
+		top: 2%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+}
+
 
 /*
 	Przed zmianami 2022 	
@@ -308,10 +353,6 @@ Navbar and Navigation Styles / Overrides
 	background-color: rgba(0,0,0,0.5);
 }
 
-
-
-
-
 /* -----------------------------
 Home Page Posters Styles 
 -------------------------------- */
@@ -358,10 +399,6 @@ Home Page Posters Styles
 .poster:hover .poster-info-overlay {
 	opacity: 1;
 }
-
-
-
-
 
 /* -----------------------------
 Footer Styles 
@@ -570,7 +607,11 @@ Media Queries / Responsive Styles
 }
 
 /* Increase width of the hero-title element on Movie-single pages to prevent text from stacking */
-
+@media (max-width: 1280px) {
+	#hero-image, #hero-image-single, #hero-image-notFound {
+		height: 680px;
+	}
+}
 @media (max-width: 1099px) {
 	#hero-image-single #hero-title {
 		font-size: 1.05em;
