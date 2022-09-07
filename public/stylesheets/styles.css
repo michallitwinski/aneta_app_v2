@@ -14,6 +14,12 @@ body {
 /* --------------------------
 Moje style
 ----------------------------- */
+.display-none{
+	display: none;
+}
+.opacity-start{
+	animation: opacityS 2s linear 1;
+}
 .div-opis {
 	margin-top: 15px;
 	margin-left: 5%;
@@ -141,6 +147,9 @@ Wersja 2022 pierwsza próba
 }
 .slider-napis-start{
 	animation: sliderStart 5s linear 1;
+}
+.slider-napis-const{
+	animation: sliderConst 25s linear infinite;
 }
 
 /*
@@ -280,7 +289,94 @@ Animacja Slidera
 		opacity: 1;
 	}
 }
-
+@keyframes sliderConst {
+	0%{
+		width: 70%;
+		top: 2%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+	19%{
+		width: 70%;
+		top: 2%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+	21%{
+		width: 70%;
+		top: 5%;
+		left: 25%;
+		right: -5%;
+		opacity: 1;
+	}
+	39%{
+		width: 70%;
+		top: 5%;
+		left: 25%;
+		right: -5%;
+		opacity: 1;
+	}
+	41%{
+		width: 65%;
+		top: 0;
+		left: 35%;
+		right: 0;
+		opacity: 1;
+	}
+	59%{
+		width: 65%;
+		top: 0;
+		left: 35%;
+		right: 0;
+		opacity: 1;
+	}
+	61%{
+		width: 65%;
+		top: 4%;
+		left: 0%;
+		right: -35%;
+		opacity: 1;
+	}
+	79%{
+		width: 65%;
+		top: 4%;
+		left: 0%;
+		right: -35%;
+		opacity: 1;
+	}
+	81%{
+		width: 70%;
+		top: 4%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+	99%{
+		width: 70%;
+		top: 4%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+	100%{
+		width: 70%;
+		top: 2%;
+		left: 15%;
+		right: -15%;
+		opacity: 1;
+	}
+}
+/* Opacity */
+@keyframes opacityS {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
 
 /*
 	Przed zmianami 2022 	
