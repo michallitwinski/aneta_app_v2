@@ -81,12 +81,16 @@ Hero Image / Title Styles
 	height: 840px;
 }
 /*
-Wersja 2022 pierwsza próba
+Wersja 2022
 */
 #main-image{
 	width: 100%;
 	background-color: white;
 
+}
+.gray{
+	color: #666;
+	font-style: italic;
 }
 .slider{
 	width: 100%;
